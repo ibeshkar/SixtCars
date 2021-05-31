@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="car"
+            type="com.example.sixtcars.data.entity.Car" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        app:cardCornerRadius="3dp"
+        android:layout_margin="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCar"
+                android:layout_width="90dp"
+                android:layout_height="64dp"
+                android:scaleType="fitXY"
+                app:link="@{car.carImageUrl}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDriver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/black"
+                android:text='@{"Driver: "+car.name}'
+                app:layout_constraintStart_toEndOf="@+id/imgCar"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Esmaeil Beshkar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text='@{"Plate: "+car.licensePlate}'
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgCar"
+                app:layout_constraintTop_toBottomOf="@id/txtDriver"
+                tools:text="HS-2390" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
