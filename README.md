@@ -2,7 +2,7 @@
 
 Simple app for show car on map
 
-# Libraries is used :
+#  Libraries:
 
 # Retrofit
 
