@@ -1,6 +1,6 @@
 # SixtCars
 
-Simple app for show car on map
+Simple app for show cars on Map
 
 #  Libraries:
 
